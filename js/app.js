@@ -24,7 +24,7 @@
       <h2>Price: $ ${product.price}</h2>
       <h4><span class="text-warning">Rate: ${product.rating.rate}</span> <span class="text-muted"> Count: ${product.rating.count}</span></h4>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button onclick="displayDetail(${product?.id}) id="details-btn" class="btn btn-danger">Details</button></div>
+      <button onclick="displayDetail(${product?.id})" id="details-btn" class="btn btn-danger">Details</button></div>
       `;
           document.getElementById("all-products").appendChild(div);
       }
