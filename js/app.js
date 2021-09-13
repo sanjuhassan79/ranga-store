@@ -8,7 +8,7 @@
 
   // show all product in UI 
   const showProducts = (products) => {
-      console.log(products);
+
 
       const allProducts = products.map((pd) => pd);
       for (const product of allProducts) {
@@ -102,7 +102,7 @@
   }
 
   const itemDeatil = (item) => {
-      console.log(item);
+
       let showDeatilItem = document.getElementById('showDeatilItem');
       showDeatilItem.textContent = '';
 
