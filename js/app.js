@@ -15,7 +15,7 @@
           const image = product.image;
           const div = document.createElement("div");
           div.classList.add("product");
-          div.innerHTML = `<div class="single-product">
+          div.innerHTML = `<div class="single-product my-5">
       <div>
     <img class="product-image" src=${image}></img>
       </div>
