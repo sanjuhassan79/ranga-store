@@ -23,8 +23,8 @@
       <p>Category: ${product.category}</p>
       <h2>Price: $ ${product.price}</h2>
       <h4><span class="text-warning">Rate: ${product.rating.rate}</span> <span class="text-muted"> Count: ${product.rating.count}</span></h4>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button onclick="displayDetail(${product?.id})" id="details-btn" class="btn btn-danger">Details</button></div>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-secondary">add to cart</button>
+      <button onclick="displayDetail(${product?.id})" id="details-btn" class="btn btn-outline-info">Details</button></div>
       `;
           document.getElementById("all-products").appendChild(div);
       }
@@ -91,5 +91,35 @@
 
   const displayDetail = (item) => {
 
+
+
+      const url = `https://fakestoreapi.com/products/${item}`
+      fetch(url)
+          .then(res => res.json())
+          .then(data => itemDeatil(data))
+
+
+  }
+
+  const itemDeatil = (item) => {
       console.log(item);
+      let showDeatilItem = document.getElementById('showDeatilItem');
+      showDeatilItem.textContent = '';
+
+      const div = document.createElement('div')
+      div.innerHTML = `
+
+<div class="detail-product">
+      <div>
+    <img class="product-image" src=${item.image}></img>
+      </div>
+      <h3>${item.title}</h3>
+      <p>Category: ${item.category}</p>
+      <h2>Price: $ ${item.price}</h2>
+      <h4><span class="text-warning">Rate: ${item.rating.rate}</span> <span class="text-muted"> Count: ${item.rating.count}</span></h4>
+
+`;
+
+      showDeatilItem.appendChild(div)
+
   }
