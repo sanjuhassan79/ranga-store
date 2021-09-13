@@ -116,7 +116,7 @@
       <h3>${item.title}</h3>
       <p>Category: ${item.category}</p>
       <h2>Price: $ ${item.price}</h2>
-      <h4><span class="text-warning">Rate: ${item.rating.rate}</span> <span class="text-muted"> Count: ${item.rating.count}</span></h4>
+      <h4><span class="text-warning">Rate: ${item.rating.rate}</span> <span class="text-muted"> Review: ${item.rating.count}</span></h4>
 
 `;
 
