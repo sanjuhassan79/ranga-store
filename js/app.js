@@ -88,7 +88,7 @@
           getInputValue("total-tax");
       document.getElementById("total").innerText = grandTotal.toFixed(2);
   };
-
+  // displayDetail
   const displayDetail = (item) => {
 
 
