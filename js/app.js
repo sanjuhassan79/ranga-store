@@ -22,7 +22,7 @@
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
       <h2>Price: $ ${product.price}</h2>
-      <h4><span class="text-warning">Rate: ${product.rating.rate}</span> <span class="text-muted"> Count: ${product.rating.count}</span></h4>
+      <h4><span class="text-warning">Rate: ${product.rating.rate}</span> <span class="text-muted"> Review: ${product.rating.count}</span></h4>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-secondary">add to cart</button>
       <button onclick="displayDetail(${product?.id})" id="details-btn" class="btn btn-outline-info">Details</button></div>
       `;
